@@ -1,0 +1,93 @@
+.wrapper {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.container {
+  width: 60px;
+  height: 40px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition-property: width, height;
+  transition-duration: 1s;
+}
+.container.containerClicked {
+  transition-timing-function: linear;
+}
+
+.containerClicked {
+  width: 500px;
+  height: 500px;
+}
+
+.modalContainer {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+}
+
+.closeContainer {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+}
+
+.customModal {
+  width: 90%;
+}
+
+.text {
+  text-align: justify;
+}
+
+.action {
+  display: flex;
+  justify-content: end;
+}
+.btnWrapper {
+  width: 90%;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: justify-content;
+  transition-duration: 1s;
+}
+
+.buttonClicked {
+  justify-content: space-between;
+  transition-timing-function: linear;
+}
+
+.formContainer {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 18px;
+  font-family: sans-serif;
+  color: #674FC0;
+  cursor: pointer;
+}
