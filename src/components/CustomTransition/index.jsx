@@ -8,6 +8,7 @@ const CustomTransition = () => {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [renderedItem, setRenderedItem] = useState(<></>);
   const [renderedFormItems, setRenderedFormItem] = useState(<></>);
+  const [customStyles, setCustomStyles] = useState('')
 
   useEffect(() => {
     let timer;
@@ -19,6 +20,17 @@ const CustomTransition = () => {
     }
     return () => clearTimeout(timer);
   }, [isButtonClicked]);
+
+  useEffect(() => {
+    let timer;
+    if (isButtonClicked) {
+      timer = setTimeout(() => {
+        setCustomStyles("buttonClicked")
+      }, 900)
+    } else {
+      setCustomStyles("")
+    }
+  }, [isButtonClicked])
 
   const handleButtonClicked = () => {
     if (isButtonClicked) {
@@ -73,7 +85,7 @@ const CustomTransition = () => {
     <div className="wrapper">
       <div className={`container ${isButtonClicked ? "containerClicked" : ""}`}>
         {isButtonClicked ? renderedItem : <></>}
-        <div id="btnId" className={`btnWrapper ${isButtonClicked ? "buttonClicked" : ""}`}>
+        <div id="btnId" className={`btnWrapper ${customStyles}`}>
           <div
             onClick={() => !isButtonClicked && handleButtonClicked()}
             className="btn"
