@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import useStyles from './Styles';
+import FormContainer from './FormContainer';
+import ProgressBar from './ProgressBar';
 
 const ReportPage = () => {
   const classes = useStyles();
@@ -13,6 +15,7 @@ const ReportPage = () => {
   return (
     <Box className={classes.container}>
       <Box className={classes.chatbox}>
+        <ProgressBar />
         <Box
           className={`${classes.icoon} ${
             isChatboxOpen ? classes.transimageOpen : ''
@@ -26,6 +29,7 @@ const ReportPage = () => {
           />
         </Box>
         <Typography variant="h6">Chatbox</Typography>
+        <FormContainer />
       </Box>
     </Box>
   );

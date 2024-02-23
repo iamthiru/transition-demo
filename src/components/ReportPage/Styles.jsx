@@ -30,6 +30,11 @@ const useStyles = makeStyles(() => ({
     borderRadius: "20px",
     position: "relative",
     border: "2px solid",
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    gridTemplateRows: "50px 1fr 100px",
+    gridColumnGap: "0px",
+    gridRowGap: "10px",
   },
   chatboxOpen: {
     opacity: 1,
