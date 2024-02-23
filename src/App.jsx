@@ -1,7 +1,7 @@
-import CustomTransition from "./components/CustomTransition";
+import ReportPage from "./components/ReportPage";
 
 function App() {
-  return <CustomTransition />;
+  return <ReportPage />;
 }
 
 export default App;
