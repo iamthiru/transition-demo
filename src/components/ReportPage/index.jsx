@@ -26,70 +26,74 @@ const ReportPage = () => {
           onClick={openChatbox}
         />
       </Box>
+
       <Box
         className={`${classes.chatbox} ${
           isChatboxOpen ? classes.openChatbox : ""
         }`}
       >
-        <ProgressBar />
+        {isChatboxOpen && (
+          <>
+            <ProgressBar />
 
-        <Box className={classes.chatboxContainer}>
-          <div
-            className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
-          ></div>
-          <Container disableGutters>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
+            <Box className={classes.chatboxContainer}>
+              <div
+                className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
+              ></div>
+              <Container disableGutters>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+              </Container>
             </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-          </Container>
-        </Box>
-
-        <FormContainer />
+            <FormContainer />
+          </>
+        )}
       </Box>
     </Box>
   );
