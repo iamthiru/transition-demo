@@ -67,13 +67,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: justify-content;
-  transition-duration: 1s;
-}
-
-.buttonClicked {
-  justify-content: space-between;
-  transition-timing-function: linear;
 }
 
 .formContainer {
@@ -84,10 +77,20 @@
 }
 
 .btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
   font-size: 24px;
   font-weight: 600;
   line-height: 18px;
   font-family: sans-serif;
   color: #674FC0;
   cursor: pointer;
+  transition-property: width;
+  transition-duration: 1s;
+}
+
+.buttonClicked {
+  width: 15%;
+  transition-timing-function: linear;
 }

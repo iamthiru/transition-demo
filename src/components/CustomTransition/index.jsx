@@ -26,7 +26,7 @@ const CustomTransition = () => {
     if (isButtonClicked) {
       timer = setTimeout(() => {
         setCustomStyles("buttonClicked")
-      }, 900)
+      }, 500)
     } else {
       setCustomStyles("")
     }
@@ -85,10 +85,10 @@ const CustomTransition = () => {
     <div className="wrapper">
       <div className={`container ${isButtonClicked ? "containerClicked" : ""}`}>
         {isButtonClicked ? renderedItem : <></>}
-        <div id="btnId" className={`btnWrapper ${customStyles}`}>
+        <div id="btnId" className={`btnWrapper`}>
           <div
             onClick={() => !isButtonClicked && handleButtonClicked()}
-            className="btn"
+            className={`btn ${customStyles}`}
           >
             K
           </div>
