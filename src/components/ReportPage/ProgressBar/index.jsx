@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 const useStyles = makeStyles(() => ({
   ProgressBarContainer: {
-    width: "30%",
+    width: "170px",
     height: "30px",
     padding: "10px",
     backgroundColor: "#FFFFFF",
@@ -15,6 +16,10 @@ const useStyles = makeStyles(() => ({
     placeContent: "center",
     placeItems: "center",
   },
+  progressValue: {
+    fontSize: "16px",
+    fontWeight: 600,
+  }
 }));
 
 const BorderLinearProgress = withStyles(() => ({
@@ -32,12 +37,12 @@ const BorderLinearProgress = withStyles(() => ({
   },
 }))(LinearProgress);
 
-const ProgressBar = () => {
+const ProgressBar = ({progressValue}) => {
   const classes = useStyles();
   return (
     <div className={classes.ProgressBarContainer}>
-      <BorderLinearProgress variant="determinate" value={45} />
-      <span> 45% </span>
+      <BorderLinearProgress variant="determinate" value={progressValue} />
+      <div className={classes.progressValue}> {`${progressValue}%`} </div>
     </div>
   );
 };

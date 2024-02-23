@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Box, Container } from "@mui/material";
 import useStyles from "./Styles";
@@ -7,6 +8,7 @@ import ProgressBar from "./ProgressBar";
 const ReportPage = () => {
   const classes = useStyles();
   const [isChatboxOpen, setIsChatboxOpen] = useState(false);
+  const [progressValue, setProgressValue] = useState(40);
 
   const openChatbox = () => {
     setIsChatboxOpen(!isChatboxOpen);
@@ -31,65 +33,69 @@ const ReportPage = () => {
           isChatboxOpen ? classes.openChatbox : ""
         }`}
       >
-        <ProgressBar />
+        {isChatboxOpen && (
+          <>
+            <ProgressBar progressValue={progressValue} />
 
-        <Box className={classes.chatboxContainer}>
-          <div
-            className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
-          ></div>
-          <Container disableGutters>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
+            <Box className={classes.chatboxContainer}>
+              <div
+                className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
+              ></div>
+              <Container disableGutters>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+                <Box>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  veritatis commodi quos rem officiis reprehenderit facere rerum
+                  enim esse sint? Ducimus nisi animi optio nemo tenetur et
+                  dolore voluptatem incidunt.
+                </Box>
+              </Container>
             </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-            <Box>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              veritatis commodi quos rem officiis reprehenderit facere rerum
-              enim esse sint? Ducimus nisi animi optio nemo tenetur et dolore
-              voluptatem incidunt.
-            </Box>
-          </Container>
-        </Box>
 
-        <FormContainer />
+            <FormContainer />
+          </>
+        )}
       </Box>
     </Box>
   );

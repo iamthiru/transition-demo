@@ -20,12 +20,28 @@ const useStyles = makeStyles(() => ({
         margin: 0
     }
   },
-  btn: {},
+  btnContainer: {},
+  customBtn: {
+  },
 }));
 
 const FormContainer = () => {
   const classes = useStyles();
-
+  const btn = {
+    backgroundColor: "#7e57c2",
+    color: "#FFFFFF",
+    textTransform: 'none',
+    boxShadow: 'none !important',
+    '&.Mui-disabled': {
+      backgroundColor: "#a88fd4",
+      color: "#cfcdcd",
+    },
+    '&:hover': {
+      backgroundColor: "#7e57c2",
+    },
+    fontSize: "14px",
+    fontWeight: 600
+  }
   const [value, setValue] = useState("");
   return (
     <div className={classes.container}>
@@ -50,12 +66,13 @@ const FormContainer = () => {
           }}
         />
       </div>
-      <div className={classes.btn}>
+      <div className={classes.btnContainer}>
         <Button
           variant="contained"
           size="small"
           onClick={() => console.log({ value })}
           disabled={value.length === 0}
+          sx={btn}
         >
           Send
         </Button>
