@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
   chatbox: {
     display: "grid",
     gridTemplateColumns: "1fr",
-    gridTemplateRows: "50px 1fr 100px",
+    gridTemplateRows: "50px 1fr 70px",
     gridRowGap: "10px",
 
     backgroundColor: "#D3CFE2",

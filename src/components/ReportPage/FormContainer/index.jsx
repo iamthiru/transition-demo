@@ -12,6 +12,7 @@ const useStyles = makeStyles(() => ({
     borderRadius: "20px",
   },
   textbox: {
+    width: "80%",
     "& .MuiOutlinedInput-root": {
         borderRadius: "10px"
     },
@@ -33,8 +34,10 @@ const FormContainer = () => {
           id="outlined-basic"
           margin="normal"
           variant="outlined"
+          fullWidth
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          placeholder="this is placeholder"
           InputProps={{
             inputProps: {
               style: {
