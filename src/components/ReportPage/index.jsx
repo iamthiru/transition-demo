@@ -1,13 +1,12 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Box, Container } from "@mui/material";
-import useStyles from "./Styles";
+import { ChatBox, ChatItems, Icon, Image, Wrapper } from "./Styles";
 import FormContainer from "./FormContainer";
 import ProgressBar from "./ProgressBar";
 
 const ReportPage = () => {
-  const classes = useStyles();
   const [isChatboxOpen, setIsChatboxOpen] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [progressValue, setProgressValue] = useState(40);
 
   const openChatbox = () => {
@@ -15,32 +14,20 @@ const ReportPage = () => {
   };
 
   return (
-    <Box className={classes.container}>
-      <Box
-        className={`${classes.icoon} ${
-          isChatboxOpen ? classes.transimageOpen : ""
-        }`}
-      >
-        <img
-          className={`${classes.image}`}
+    <Wrapper>
+      <Icon style={{ top: isChatboxOpen ? "10%" : "50%" }}>
+        <Image
           src="https://via.placeholder.com/150.png"
           alt="Image"
           onClick={openChatbox}
         />
-      </Box>
-      <Box
-        className={`${classes.chatbox} ${
-          isChatboxOpen ? classes.openChatbox : ""
-        }`}
-      >
+      </Icon>
+      <ChatBox style={{ opacity: isChatboxOpen ? 2 : 0 }}>
         {isChatboxOpen && (
           <>
             <ProgressBar progressValue={progressValue} />
 
-            <Box className={classes.chatboxContainer}>
-              <div
-                className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
-              ></div>
+            <ChatItems>
               <Container disableGutters>
                 <Box>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
@@ -91,13 +78,13 @@ const ReportPage = () => {
                   dolore voluptatem incidunt.
                 </Box>
               </Container>
-            </Box>
+            </ChatItems>
 
             <FormContainer />
           </>
         )}
-      </Box>
-    </Box>
+      </ChatBox>
+    </Wrapper>
   );
 };
 
