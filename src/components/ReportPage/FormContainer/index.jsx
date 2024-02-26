@@ -18,7 +18,13 @@ const useStyles = makeStyles(() => ({
     },
     "& .MuiTextField-root": {
         margin: 0
-    }
+    },
+    "@media (max-width: 800px)": {
+      width: "70%",
+    },
+    "@media (max-width: 450px)": {
+      width: "60%",
+    },
   },
   btnContainer: {},
   customBtn: {
@@ -59,7 +65,6 @@ const FormContainer = () => {
               style: {
                 fontSize: 16,
                 fontWeight: 500,
-                width: "250px",
                 height: "10px",
               },
             },

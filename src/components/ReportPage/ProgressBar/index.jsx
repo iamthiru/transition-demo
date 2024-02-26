@@ -15,10 +15,24 @@ const useStyles = makeStyles(() => ({
     gridTemplateRows: "1fr",
     placeContent: "center",
     placeItems: "center",
+
+    "@media (max-width: 800px)": {
+      width: "140px",
+      gridTemplateColumns: "1fr 30px",
+    },
+    "@media (max-width: 500px)": {
+      width: "120px",
+    },
+    "@media (max-width: 450px)": {
+      width: "100px",
+    },
   },
   progressValue: {
     fontSize: "16px",
     fontWeight: 600,
+    "@media (max-width: 500px)": {
+      fontSize: "14px",
+    },
   }
 }));
 

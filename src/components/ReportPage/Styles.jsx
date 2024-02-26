@@ -18,6 +18,11 @@ const useStyles = makeStyles(() => ({
     borderRadius: "10px",
     backgroundColor: "#fff",
     boxShadow: "0px 10px 8px rgba(0, 0, 0, 0.1)",
+
+    "@media (max-width: 800px)": {
+      width: 70,
+      height: 70,
+    },
   },
   icoon: {
     position: "absolute",
@@ -26,6 +31,8 @@ const useStyles = makeStyles(() => ({
     alignItems: "center",
     zIndex: 1,
     top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
     transition: "top 0.5s ease-in-out",
   },
   chatbox: {
@@ -42,12 +49,19 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0px 0px 17px 1px #888888',
     opacity: 0,
     transition: "opacity 1s ease-in-out",
+
+    "@media (max-width: 800px)": {
+      width: "80%",
+    },
+    "@media (max-width: 600px)": {
+      width: "90%",
+    },
   },
   openChatbox: {
     opacity: 2,
   },
   transimageOpen: {
-    top: "5%",
+    top: "10%",
   },
   chatboxContainer:{
     height: '93%',
