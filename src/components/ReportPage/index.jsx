@@ -1,12 +1,17 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Box, Container } from "@mui/material";
-import useStyles from "./Styles";
 import FormContainer from "./FormContainer";
 import ProgressBar from "./ProgressBar";
+import {
+  MainContainer,
+  StyledChatBox,
+  StyledChatBoxContainer,
+  StyledIconBox,
+  StyledImage,
+} from "./StylesMain";
 
 const ReportPage = () => {
-  const classes = useStyles();
   const [isChatboxOpen, setIsChatboxOpen] = useState(false);
   const [progressValue, setProgressValue] = useState(40);
 
@@ -15,32 +20,25 @@ const ReportPage = () => {
   };
 
   return (
-    <Box className={classes.container}>
-      <Box
-        className={`${classes.icoon} ${
-          isChatboxOpen ? classes.transimageOpen : ""
-        }`}
+    <MainContainer>
+      <StyledIconBox
+        style={{
+          top: isChatboxOpen ? "5%" : "50%",
+        }}
+        minHeight={isChatboxOpen ? "9%" : ""}
       >
-        <img
-          className={`${classes.image}`}
+        <StyledImage
           src="https://via.placeholder.com/150.png"
           alt="Image"
           onClick={openChatbox}
         />
-      </Box>
-      <Box
-        className={`${classes.chatbox} ${
-          isChatboxOpen ? classes.openChatbox : ""
-        }`}
-      >
+      </StyledIconBox>
+      <StyledChatBox style={{ opacity: isChatboxOpen ? 1 : 0 }}>
         {isChatboxOpen && (
           <>
             <ProgressBar progressValue={progressValue} />
 
-            <Box className={classes.chatboxContainer}>
-              <div
-                className={`${classes.fadeOverlay} ${classes.fadeOverlayTop}`}
-              ></div>
+            <StyledChatBoxContainer>
               <Container disableGutters>
                 <Box>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
@@ -91,13 +89,13 @@ const ReportPage = () => {
                   dolore voluptatem incidunt.
                 </Box>
               </Container>
-            </Box>
+            </StyledChatBoxContainer>
 
             <FormContainer />
           </>
         )}
-      </Box>
-    </Box>
+      </StyledChatBox>
+    </MainContainer>
   );
 };
 

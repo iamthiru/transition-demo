@@ -1,57 +1,27 @@
 import { Button, TextField } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import { useState } from "react";
-
-const useStyles = makeStyles(() => ({
-  container: {
-    display: "flex",
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "space-around",
-    backgroundColor: "#e9eaeb",
-    borderRadius: "20px",
-  },
-  textbox: {
-    width: "80%",
-    "& .MuiOutlinedInput-root": {
-        borderRadius: "10px"
-    },
-    "& .MuiTextField-root": {
-        margin: 0
-    },
-    "@media (max-width: 800px)": {
-      width: "70%",
-    },
-    "@media (max-width: 450px)": {
-      width: "60%",
-    },
-  },
-  btnContainer: {},
-  customBtn: {
-  },
-}));
+import { TextBoxContainer,TextBox } from "./StylesFormContainer";
 
 const FormContainer = () => {
-  const classes = useStyles();
   const btn = {
     backgroundColor: "#7e57c2",
     color: "#FFFFFF",
-    textTransform: 'none',
-    boxShadow: 'none !important',
-    '&.Mui-disabled': {
+    textTransform: "none",
+    boxShadow: "none !important",
+    "&.Mui-disabled": {
       backgroundColor: "#a88fd4",
       color: "#cfcdcd",
     },
-    '&:hover': {
+    "&:hover": {
       backgroundColor: "#7e57c2",
     },
     fontSize: "14px",
-    fontWeight: 600
-  }
+    fontWeight: 600,
+  };
   const [value, setValue] = useState("");
   return (
-    <div className={classes.container}>
-      <div className={classes.textbox}>
+    <TextBoxContainer>
+      <TextBox>
         <TextField
           id="outlined-basic"
           margin="normal"
@@ -70,8 +40,8 @@ const FormContainer = () => {
             },
           }}
         />
-      </div>
-      <div className={classes.btnContainer}>
+      </TextBox>
+      <div className="">
         <Button
           variant="contained"
           size="small"
@@ -82,7 +52,7 @@ const FormContainer = () => {
           Send
         </Button>
       </div>
-    </div>
+    </TextBoxContainer>
   );
 };
 
